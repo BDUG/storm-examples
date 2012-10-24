@@ -1,0 +1,10 @@
+# Lines starting with '#' are considered comments.
+# Ignore any file named foo.txt.
+*.jar
+# Ignore (generated) html files,
+*.class
+# except foo.html which is maintained by hand.
+.svn
+target/
+.project
+.classpath
