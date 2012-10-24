@@ -7,8 +7,7 @@ import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.tuple.Fields;
 
 /**
- * This topology demonstrates Storm's stream groupings and multilang
- * capabilities.
+ * This topology demonstrates Storm's stream groupings
  */
 public class ParallelWordCountTopology {
 

@@ -19,8 +19,6 @@ import de.widas.examples.deltastepping.utils.GraphUtils;
 import de.widas.examples.deltastepping.SystemInSpout;
 
 /**
- * This topology demonstrates Storm's stream groupings and multilang
- * capabilities.
  */
 public class DeltaSteppingShortestPath {
 

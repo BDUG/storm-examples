@@ -2,7 +2,7 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.widas.storm</groupId>
-	<artifactId>delta-stepping</artifactId>
+	<artifactId>storm-examples</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>examples</name>
 	<repositories>

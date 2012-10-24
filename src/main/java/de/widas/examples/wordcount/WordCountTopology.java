@@ -17,8 +17,8 @@ import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 
 /**
- * This topology demonstrates Storm's stream groupings and multilang
- * capabilities.
+ * This topology demonstrates Storm's stream groupings
+ * 
  */
 public class WordCountTopology {
 
