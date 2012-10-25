@@ -19,13 +19,19 @@ public class DeltaSteppingFilterBolt extends BaseBasicBolt {
 	String distance = tuple.getString(1);
 	String path = tuple.getString(2);
 
+	if (GraphUtils.getAllShortestPathes().get(to) == null) {
+	    shortestdistance = Integer.MAX_VALUE;
+	    shortestpath = "";
+	}
 	Integer distanceToCheck = Integer.valueOf(distance);
 	if (shortestdistance.intValue() > distanceToCheck.intValue()) {
 	    shortestdistance = distanceToCheck;
 	    shortestpath = path;
 	}
-	GraphUtils.getAllShortestPathes().put(to, path + "-->" + distance);
-	System.out.println(path + "-->" + distance);
+	System.out.println(path + "-->" + distance + " | " + shortestpath
+		+ "-->" + shortestdistance);
+	GraphUtils.getAllShortestPathes().put(to,
+		shortestpath + "-->" + shortestdistance);
     }
 
     @Override
