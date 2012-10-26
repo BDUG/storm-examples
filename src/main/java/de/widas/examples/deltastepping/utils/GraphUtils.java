@@ -1,6 +1,5 @@
 package de.widas.examples.deltastepping.utils;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -15,13 +14,13 @@ public class GraphUtils {
 
     private static List<Vertex> allVertexes = new LinkedList<Vertex>();
     private static List<Edge> allEdges = new LinkedList<Edge>();
-    private static Map<String, String> allShortestPathes = new HashMap<String, String>();
+    private static Map<String, Object[]> allShortestPathes = new TreeMap<String, Object[]>();
 
     public static void initStandardGraph() {
 	Vertex v0 = new Vertex();
 	v0.setName("0");
 	getAllVertexes().add(v0);
-	Vertex v1 = new Vertex();
+	Vertex v1 = new Vertex(); 
 	v1.setName("1");
 	getAllVertexes().add(v1);
 	Vertex v2 = new Vertex();
@@ -109,7 +108,7 @@ public class GraphUtils {
 	return allEdges;
     }
 
-    public static Map<String, String> getAllShortestPathes() {
+    public static Map<String, Object[]> getAllShortestPathes() {
 	return allShortestPathes;
     }
 
@@ -189,7 +188,7 @@ public class GraphUtils {
     public static void printShortestPaths() {
 	System.out.println("kuerzester PFad nach:");
 	for (String s : allShortestPathes.keySet()) {
-	    System.out.println(s+ ": "+ allShortestPathes.get(s));
+	    System.out.println(s+ ": "+ allShortestPathes.get(s)[0]);
 	}
     }
 
